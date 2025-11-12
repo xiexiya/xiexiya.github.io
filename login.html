@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>龙采体育云平台-登录</title>
+</head>
+<body style="margin: 0;background-image: url('static/login/bg.jpg')">
+    <header style="width: 100%;">
+        <img class="logo" src="static/login/logo.png" />
+        <a href="index.html">首页</a>
+        <a>产品</a>
+        <a>案例</a>
+        <a>服务</a>
+        <a>动态</a>
+        <a>关于龙采</a>
+        <span style="margin-left: 3rem">010-85795131</span>
+        <div class="div-avatar">
+            <img src="static/login/avatar.png">
+            <span>登录</span>
+        </div>
+        <a href="index.html" class="text-try">免费试用</a>
+    </header>
+    <div class="content">
+        <p class="title">立即登录</p>
+        <input id="username" style="margin-top: 50px" placeholder="请输入账号">
+        <input type="password" id="password" style="margin-top: 22px" placeholder="请输入密码">
+        <div class="btn-login">登录</div>
+        <div class="div-forget">
+            <span>忘记密码?</span>
+            <span>免费注册</span>
+        </div>
+    </div>
+</body>
+<script>
+    const loginForm = document.querySelector('.btn-login');
+    loginForm.addEventListener('click', (e) => {
+        e.preventDefault();
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        if (!username || !password) {
+            alert('请输入账号和密码');
+        }else if (username==="lcty" && password==="Lcty&666"){
+            document.cookie = "sportPlatform=lcty"
+            window.location.href="console.html"
+        }else {
+            alert('账号或密码错误');
+        }
+    });
+</script>
+<style>
+    a,a:link, a:visited, a:hover{
+        text-decoration: none;
+    }
+    img{
+        object-fit: contain;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        background-color: rgba(255,255,255,0.2);
+    }
+    header .logo{
+        margin-left: 12rem;
+        margin-right: 10rem;
+        height: 50px;
+    }
+    @media (max-width: 1400px) {
+        header .logo{
+            margin-left: 6rem;
+            margin-right: 4rem;
+        }
+    }
+    header a,header span{
+        color: white;
+        font-size: 15px;
+    }
+    .div-avatar{
+        display: flex;
+        align-items: center;
+    }
+    .div-avatar img{
+        margin-right: 10px;
+        width: 16px;
+        height: 16px;
+    }
+    .text-try{
+        margin-right: 10rem;
+        width: 88px;
+        height: 33px;
+        line-height: 33px;
+        border-radius: 44px;
+        background-color: #0052d9;
+        color: white;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        float: right;
+        margin-top: 8rem;
+        margin-right: 9rem;
+        width: 440px;
+        height: 467px;
+        background: white;
+        border-radius: 58px;
+        border: solid 8px #6d99e6;
+    }
+    .content .title{
+        margin-top: 50px;
+        margin-bottom: 0;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    input{
+        box-sizing: border-box;
+        padding: 0 20px;
+        width: 340px;
+        height: 54px;
+        background-color: #fafafa;
+        border-radius: 8px;
+        border: 0;
+        font-size: 15px;
+    }
+    .btn-login{
+        margin-top: 50px;
+        width: 340px;
+        height: 50px;
+        line-height: 50px;
+        background-color: #1f48e1;
+        border-radius: 8px;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .btn-login:hover{
+        background-color: #2160c6;
+    }
+    .div-forget{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        width: 340px;
+    }
+    .div-forget span{
+        color: #929292;
+        font-size: 15px;
+        cursor: pointer;
+    }
+</style>
+</html>
